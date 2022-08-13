@@ -18,6 +18,9 @@ namespace CTRPluginFramework
 	void kantu(MenuEntry *entry);
 	void hp_huan(MenuEntry *entry);
 	void kuuhuku_huan(MenuEntry *entry);
+	void dameji_bairitu(MenuEntry *entry);
+	void block_wanpan(MenuEntry *entry);
+	void block_wanpan_turuhasi(MenuEntry *entry);
 	
 }
 #endif
