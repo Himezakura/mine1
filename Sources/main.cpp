@@ -72,13 +72,17 @@ namespace CTRPluginFramework
 	// new MenuEntry("チート名", nullptr, cheats.cppのチート名),　歯車
     void    InitMenu(PluginMenu &menu)
     {
-        MenuFolder* FolderA = new MenuFolder(Color::Lime << "あああああ");
+        MenuFolder *folder1 = new MenuFolder(Color::Lime << "日本語の名前","説明");
 		{
-			*FolderA += new MenuFolder(Color::Lime << "にばんめえええ","",
+			MenuFolder *folder2 = new MenuFolder("日本語の名前");
 			{
-				new MenuEntry("スピードハック1",nullptr,speed1),
-			});
+				*folder2 += new MenuEntry("日本語の名前", NAME);
+		    }
+			*folder1 += folder2;
+			
+			*folder1 += new MenuEntry("日本語の名前", NAME);
 		}
+		*menu += folder1;
     }
 
     int     main(void)
