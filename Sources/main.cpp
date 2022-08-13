@@ -74,15 +74,14 @@ namespace CTRPluginFramework
     {
         menu += new MenuFolder(Color::Lime<< "移動系", "",
 		{
-			new MenuEntry("スピードハック1",nullptr,speed1),
-			new MenuEntry("スピードハック2",nullptr,speed2),
-		});
-
-	   menu += new MenuFolder(Color::Lime<< "通常", "",
-		{
-			
 			new MenuEntry("HP無限",hp_huan),
 			new MenuEntry("空腹無限",kuuhuku_huan),
+			
+			menu += new MenuFolder("日本語の名前")
+			{
+				new MenuEntry("スピードハック1",nullptr,speed1),
+				new MenuEntry("スピードハック2",nullptr,speed2),
+			}
 		});
     }
 
