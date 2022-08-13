@@ -78,7 +78,7 @@ namespace CTRPluginFramework
 			{
 			new MenuEntry("スピードハック1",nullptr,speed1),
 			new MenuEntry("スピードハック2",nullptr,speed2),
-			});
+
 			
 			new MenuEntry("HP無限",hp_huan),
 			new MenuEntry("空腹無限",kuuhuku_huan),
