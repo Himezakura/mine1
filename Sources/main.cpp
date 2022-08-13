@@ -72,17 +72,26 @@ namespace CTRPluginFramework
 	// new MenuEntry("チート名", nullptr, cheats.cppのチート名),　歯車
     void    InitMenu(PluginMenu &menu)
     {
-        MenuFolder *folder1 = new MenuFolder(Color::Lime << "日本語の名前","説明");
+       menu += new MenuFolder(Color::Lime<< "移動系", "",
 		{
-			MenuFolder *folder2 = new MenuFolder("日本語の名前");
-			{
-				*folder2 += new MenuEntry("日本語の名前", NAME);
-		    }
-			*folder1 += folder2;
+			new MenuEntry("スピードハック1",nullptr,speed1),
+			new MenuEntry("スピードハック2",nullptr,speed2),
+			new MenuEntry("貫通系",nullptr,kantu),
+		});
+		
+		menu += new MenuFolder(Color::Lime<< "ブロック系","",
+		{
+			new MenuEntry("ブロックワンパン(拳)",nullptr,block_wanpan),
+			new MenuEntry("ブロックワンパン(アイテム)",nullptr,block_wanpan_turuhasi),
+		});
+		
+		menu += new MenuFolder(Color::Lime<< "プレイヤー系", "",
+		{
+			new MenuEntry("HP無限",hp_huan),
+			new MenuEntry("空腹度無限",kuuhuku_huan),
+			new MenuEntry("ダメージ倍率変更",nullptr,dameji_bairitu),
+		});
 			
-			*folder1 += new MenuEntry("日本語の名前", NAME);
-		}
-		*menu += folder1;
     }
 
     int     main(void)
