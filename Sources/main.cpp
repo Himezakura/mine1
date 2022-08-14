@@ -89,9 +89,7 @@ namespace CTRPluginFramework
 		
 		menu += new MenuFolder(Color::Lime<< "アイテム系","",
 		{
-			new MenuEntry("スロットアイテムの個数文字の配置変更",nullptr,item_slot_suuji),
-			new MenuEntry("スロットアイテムの着色（黒）",nullptr,item_slot_color),
-			new MenuEntry("スロットアイテムの大きさ変更",nullptr,item_slot_ookisa),
+		
 		});
 		
 		
@@ -100,8 +98,7 @@ namespace CTRPluginFramework
 			new MenuEntry("世界透明化",nullptr,sekai_toumei),
 			new MenuEntry("時間変更",nullptr,jikan_henkou),
 			new MenuEntry("時間逆変更",nullptr,jikan_gyaku),
-			new MenuEntry("雷降らす（強制）/act固定",nullptr,kaminari),
-
+			
 		});
 		
 		
