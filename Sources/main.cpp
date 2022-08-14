@@ -110,7 +110,7 @@ namespace CTRPluginFramework
 			new MenuEntry("HP無限",hp_huan),
 			new MenuEntry("空腹度無限",kuuhuku_huan),
 			new MenuEntry("ダメージ倍率変更",nullptr,dameji_bairitu),
-			new MenuEntry("プレイヤー透明化",nullptr,player_toumei),
+			new MenuEntry("透明化",nullptr,player_toumei),
 			new MenuEntry("プレイヤー発光",nullptr,player_hakkou),
 		});
 			
