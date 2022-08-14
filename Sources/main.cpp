@@ -79,17 +79,39 @@ namespace CTRPluginFramework
 			new MenuEntry("貫通系",nullptr,kantu),
 		});
 		
+		
 		menu += new MenuFolder(Color::Lime<< "ブロック系","",
 		{
 			new MenuEntry("ブロックワンパン(拳)",nullptr,block_wanpan),
 			new MenuEntry("ブロックワンパン(アイテム)",nullptr,block_wanpan_turuhasi),
 		});
 		
+		
+		menu += new MenuFolder(Color::Lime<< "アイテム系","",
+		{
+			new MenuEntry("スロットアイテムの個数文字の配置変更",nullptr,item_slot_suuji),
+			new MenuEntry("スロットアイテムの着色（黒）",nullptr,item_slot_color),
+			new MenuEntry("スロットアイテムの大きさ変更",nullptr,item_slot_ookisa),
+		});
+		
+		
+		menu += new MenuFolder(Color::Lime<< "世界系","",
+		{
+			new MenuEntry("世界透明化",nullptr,sekai_toumei),
+			new MenuEntry("時間変更",nullptr,jikan_henkou),
+			new MenuEntry("時間逆変更",nullptr,jikan_gyaku),
+			new MenuEntry("雷降らす（強制）/act固定",nullptr,kaminari),
+			new MenuEntry("霧の色変更",nullptr,kiri_color),
+		});
+		
+		
 		menu += new MenuFolder(Color::Lime<< "プレイヤー系", "",
 		{
 			new MenuEntry("HP無限",hp_huan),
 			new MenuEntry("空腹度無限",kuuhuku_huan),
 			new MenuEntry("ダメージ倍率変更",nullptr,dameji_bairitu),
+			new MenuEntry("プレイヤー透明化",nullptr,player_toumei),
+			new MenuEntry("プレイヤー発光",nullptr,player_hakkou),
 		});
 			
     }
@@ -99,8 +121,8 @@ namespace CTRPluginFramework
 		//Pluginのバージョンと説明
 		//コード提供者 : a
 		//            
-        PluginMenu *menu = new PluginMenu("MineCraft", 1, 3, 0,
-                                            "作成者 : 姫桜大輝\nコード提供者 : rruu\n            らいそんちょー");
+        PluginMenu *menu = new PluginMenu("MineCraft_beta", 1, 6, 2,
+                                            "作成者 : 姫桜大輝\nコード提供者 : rruu\n                    らいそんちょー");
 
         // メニューをフレームイベントと同期します
         menu->SynchronizeWithFrame(true);
