@@ -101,7 +101,7 @@ namespace CTRPluginFramework
 			new MenuEntry("時間変更",nullptr,jikan_henkou),
 			new MenuEntry("時間逆変更",nullptr,jikan_gyaku),
 			new MenuEntry("雷降らす（強制）/act固定",nullptr,kaminari),
-			new MenuEntry("霧の色変更",nullptr,kiri_color),
+
 		});
 		
 		
