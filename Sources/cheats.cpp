@@ -138,18 +138,6 @@ void jikan_henkou(MenuEntry *entry){
    Process::Write32(0x0739638, 0x00000000);
 }}
 
-
-//世界透明化
-void sekai_toumei(MenuEntry *entry){
-	Keyboard key("世界透明化", {"オン", "オフ"});
- int B = key.Open();
-  if (B == 0) {
-   Process::Write32(0x0649690, 0x00000000);
-  } else if (B == 1) {
-   Process::Write32(0x0649690, 0x3F800000);
-}}
-
-
 //雷降らす（強制）
 void kaminari(MenuEntry *entry){
 	Keyboard key("雨が降っているときに有効", {"雷降らす（強制）", "雷降らす（強制 オフ", "雷降った時のact固定",　"雷降った時のact固定オフ"});
