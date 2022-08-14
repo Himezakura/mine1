@@ -154,42 +154,6 @@ void kaminari(MenuEntry *entry){
 
 
 //霧の色変更
-void kiri_color(MenuEntry *entry){
-	Keyboard key("霧の色を選択", {"赤", "青", "黄", "緑", "紫", "白", "黒", "オフ"});
- int B = key.Open();
-  if (B == 0) {
-   Process::Write32(0x07393C4, 0x00000000);
-   Process::Write32(0x07393C8, 0x40000000);
-   Process::Write32(0x07393CC, 0x00000000);
-  } else if (B == 1) {
-   Process::Write32(0x07393C4, 0x40000000);
-   Process::Write32(0x07393C8, 0x00000000);
-   Process::Write32(0x07393CC, 0x00000000);
-  } else if (B == 2) {
-   Process::Write32(0x07393C4, 0x00000000);
-   Process::Write32(0x07393C8, 0x40000000);
-   Process::Write32(0x07393CC, 0x40000000);
-  } else if (B == 3) {
-   Process::Write32(0x07393C4, 0x00000000);
-   Process::Write32(0x07393C8, 0x00000000);
-   Process::Write32(0x07393CC, 0x40000000);
-  }　else if (B == 4) {
-   Process::Write32(0x07393C4, 0x40000000);
-   Process::Write32(0x07393C8, 0x40000000);
-   Process::Write32(0x07393CC, 0x00000000);
-  } else if (B == 5) {
-   Process::Write32(0x07393C4, 0x00000000);
-   Process::Write32(0x07393C8, 0x70000000);
-   Process::Write32(0x07393CC, 0x00000000);
-  } else if (B == 6) {
-   Process::Write32(0x07393C4, 0x00000000);
-   Process::Write32(0x07393C8, 0x40000000);
-   Process::Write32(0x07393CC, 0x00000000);
-  } else if (B == 7) {
-   Process::Write32(0x07393C4, 0x3F800000);
-   Process::Write32(0x07393C8, 0x3F2BABAC);
-   Process::Write32(0x07393CC, 0x3F52D2D4);
-}}
 
 
 //アイテムの個数文字真ん中
@@ -220,7 +184,7 @@ void item_slot_ookisa(MenuEntry *entry){
  int B = key.Open();
   if (B == 0) {
    Process::Write32(0x01ED0D4, 0x40B00000);
-  } else if (B == 1) {
+   } else if (B == 1) {
    Process::Write32(0x01ED0D4, 0x40000000);
 　　} else if (B == 2) {
    Process::Write32(0x01ED0D4, 0x3F500000);
