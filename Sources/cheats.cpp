@@ -139,56 +139,19 @@ void jikan_henkou(MenuEntry *entry){
 }}
 
 //雷降らす（強制）
-void kaminari(MenuEntry *entry){
-	Keyboard key("雨が降っているときに有効", {"雷降らす（強制）", "雷降らす（強制 オフ", "雷降った時のact固定",　"雷降った時のact固定オフ"});
- int B = key.Open();
-  if (B == 0) {
-   Process::Write32(0x064968C, 0xE1A00000);
-  } else if (B == 1) {
-   Process::Write32(0x064968C, 0x3C23D70A);
-  } else if (B == 2) {
-   Process::Write32(0x0649680, 0xC2400000);
-  } else if (B == 3) {
-   Process::Write32(0x0649680, 0x3F800001);
-}}
 
 
 //霧の色変更
 
 
 //アイテムの個数文字真ん中
-void item_slot_suuji(MenuEntry *entry){
-	Keyboard key("アイテムの個数文字が真ん中に配置される（ゴミコード）", {"オン", "オフ"});
- int B = key.Open();
-  if (B == 0) {
-   Process::Write32(0x01ED2AC, 0x40000000);
-  } else if (B == 1) {
-   Process::Write32(0x01ED2AC, 0x3F800000);
-}}
 
 
 //スロットアイテム着色
-void item_slot_color(MenuEntry *entry){
-	Keyboard key("スロットアイテムのみ黒くなる", {"オン", "オフ"});
- int B = key.Open();
-  if (B == 0) {
-   Process::Write32(0x01ED0D8, 0x00000000);
-  } else if (B == 1) {
-   Process::Write32(0x01ED0D8, 0x3F800000);
-}}
 
 
 //スロットアイテム大きさ変更
-void item_slot_ookisa(MenuEntry *entry){
-	Keyboard key("スロットアイテムのみ大きさ変更", {"大きい", "通常", "小さい"});
- int B = key.Open();
-  if (B == 0) {
-   Process::Write32(0x01ED0D4, 0x40B00000);
-   } else if (B == 1) {
-   Process::Write32(0x01ED0D4, 0x40000000);
-　　} else if (B == 2) {
-   Process::Write32(0x01ED0D4, 0x3F500000);
-}}
+
 
 
 //プライヤー透明化
