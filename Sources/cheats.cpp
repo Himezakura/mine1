@@ -141,7 +141,7 @@ void jikan_henkou(MenuEntry *entry){
 
 //世界透明化
 void sekai_toumei(MenuEntry *entry){
-	Keyboard key("雨が降っているときに有効", {"オン", "オフ"});
+	Keyboard key("世界透明化", {"オン", "オフ"});
  int B = key.Open();
   if (B == 0) {
    Process::Write32(0x0649690, 0x00000000);
@@ -152,7 +152,7 @@ void sekai_toumei(MenuEntry *entry){
 
 //雷降らす（強制）
 void kaminari(MenuEntry *entry){
-	Keyboard key("雨が降っているときに有効", {"雷降らす（強制）", "雷降らす（強制） オフ", "雷降った時のact固定",　"雷降った時のact固定　オフ"});
+	Keyboard key("雨が降っているときに有効", {"雷降らす（強制）", "雷降らす（強制 オフ", "雷降った時のact固定",　"雷降った時のact固定オフ"});
  int B = key.Open();
   if (B == 0) {
    Process::Write32(0x064968C, 0xE1A00000);
@@ -167,7 +167,7 @@ void kaminari(MenuEntry *entry){
 
 //霧の色変更
 void kiri_color(MenuEntry *entry){
-	Keyboard key("霧の色を選択", {"赤", "青", "黄色",　"緑", "紫", "白", "黒", "オフ"});
+	Keyboard key("霧の色を選択", {"赤", "青", "黄", "緑", "紫", "白", "黒", "オフ"});
  int B = key.Open();
   if (B == 0) {
    Process::Write32(0x07393C4, 0x00000000);
@@ -185,7 +185,7 @@ void kiri_color(MenuEntry *entry){
    Process::Write32(0x07393C4, 0x00000000);
    Process::Write32(0x07393C8, 0x00000000);
    Process::Write32(0x07393CC, 0x40000000);
-　　}　else if (B == 4) {
+  }　else if (B == 4) {
    Process::Write32(0x07393C4, 0x40000000);
    Process::Write32(0x07393C8, 0x40000000);
    Process::Write32(0x07393CC, 0x00000000);
@@ -195,7 +195,7 @@ void kiri_color(MenuEntry *entry){
    Process::Write32(0x07393CC, 0x00000000);
   } else if (B == 6) {
    Process::Write32(0x07393C4, 0x00000000);
-   Process::Write32(0x07393C8, 0x400000000);
+   Process::Write32(0x07393C8, 0x40000000);
    Process::Write32(0x07393CC, 0x00000000);
   } else if (B == 7) {
    Process::Write32(0x07393C4, 0x3F800000);
@@ -241,7 +241,7 @@ void item_slot_ookisa(MenuEntry *entry){
 
 //プライヤー透明化
 void player_toumei(MenuEntry *entry){
-	Keyboard key("", {"オン", "オフ"});
+	Keyboard key("透明化", {"オン", "オフ"});
  int B = key.Open();
   if (B == 0) {
    Process::Write32(0x019D320, 0x10000000);
