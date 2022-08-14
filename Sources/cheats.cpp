@@ -254,7 +254,7 @@ void player_toumei(MenuEntry *entry){
 
 //プライヤー発光
 void player_hakkou(MenuEntry *entry){
-	Keyboard key("", {"白", "通常", "黒"});
+	Keyboard key("発光", {"白", "通常", "黒"});
  int B = key.Open();
   if (B == 0) {
    Process::Write32(0x01D9868, 0x7FFFFFFF);
