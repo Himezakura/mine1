@@ -24,10 +24,6 @@ namespace CTRPluginFramework
 	void jikan_gyaku(MenuEntry *entry);
 	void sekai_toumei(MenuEntry *entry);
 	void jikan_henkou(MenuEntry *entry);
-	void kaminari(MenuEntry *entry);
-	void item_slot_suuji(MenuEntry *entry);
-	void item_slot_color(MenuEntry *entry);
-	void item_slot_ookisa(MenuEntry *entry);
 	void player_toumei(MenuEntry *entry);
 	void player_hakkou(MenuEntry *entry);
 	
