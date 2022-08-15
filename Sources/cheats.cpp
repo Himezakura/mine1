@@ -175,7 +175,7 @@ void player_hakkou(MenuEntry *entry){
    Process::Write32(0x01D9868, 0x7FFFFFFF);
   } else if (B == 1) {
    Process::Write32(0x01D9868, 0x3F800000);
-　 } else if (B == 2) {
+  } else if (B == 2) {
    Process::Write32(0x01D9868, 0x00000000);
 }}
 
